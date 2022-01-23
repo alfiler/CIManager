@@ -4,4 +4,8 @@ from .models import Producto
 
 # Create your views here.
 
-def crear_producto (request, )
+def vista_inicio (request ):
+    return render (request, 'inicio.html')
+
+def vista_inventario (request ):
+    return render (request, 'inventario.html')

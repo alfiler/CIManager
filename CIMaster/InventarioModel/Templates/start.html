@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+      {% load static%}
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>{% block titulo %}
+  
+      {% endblock %}</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+    <!-- MDB -->
+    <link rel="stylesheet" href="{% static 'Inventario/css/mdb.min.css'%}" />
+  </head>
+  <body style= "background-color:#E7EFF3">
+
+    <!-- Start your project here-->
+    <!-- NAVBAR-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+            
+      
+          <!-- Collapsible wrapper -->
+          <div class="collapse navbar-collapse" id="navbarRightAlignExample">
+            <!-- Left links -->
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'inventario' %}">Inventario</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Proveedores</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Ventas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url 'inicio' %}">Inicio</a>
+              </li>
+            </ul>
+            <!-- Left links -->
+          </div>
+        
+          
+          <!-- Collapsible wrapper -->
+        </div>
+        <!-- Container wrapper -->
+      </nav>
+    
+    <!-- /NAVBAR-->
+      {% block bodycontent %}
+
+      {% endblock  %}
+
+
+      <footer>
+
+        {% block footer%}
+        {% endblock %}
+      </footer>
+
+    <!-- End your project here-->
+
+
+
+    <!-- MDB -->
+    <script type="text/javascript" src="{% static 'Inventario/js/mdb.min.js' %}"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript"></script>
+  </body>
+</html>
