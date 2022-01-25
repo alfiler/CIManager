@@ -10,7 +10,14 @@
 {% block bodycontent %}
 
 <div class="align:center"> 
-  <h1 style="text-align:center;padding-top: 20px;padding-bottom:20px; color:black;"><b>Inventario</b> </h1> 
+  <h1 style="text-align:center;padding-top: 20px;padding-bottom:20px; color:black;"><b>INVENTARIO</b> </h1> 
+
+  {% for prod in Producto%}
+
+    {{prod}}
+    <br>
+
+  {% endfor %}
 
 
 {% endblock %}
