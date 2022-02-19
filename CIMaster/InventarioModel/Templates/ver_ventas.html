@@ -1,0 +1,19 @@
+{% extends 'start.html'%}
+
+{% load static %}
+
+{% block titulo%}
+CIManager - {{ventas.nombre_producto}}
+    {% endblock %}
+
+    {% block bodycontent %}
+
+    <ul> 
+        <li> Producto: {{ventas.nombre_producto}}</li>
+        <li> Precio: $ {{ventas.precio_producto}}</li>
+        <li> Cantidades: {{ventas.cantidades}}</li>
+        <li> VendedorId: {{ventas.vendedor_id}}</li>
+    </ul>
+
+    
+{% endblock  %}

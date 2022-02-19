@@ -12,15 +12,16 @@
 <div class="align:center"> 
   <!-- <h1 style="text-align:center;padding-top: 20px;padding-bottom:20px; color:black;"><b></b> </h1> -->
 
-  {% for prod in Producto %}
+  {% for vent in ventas%}
 
-    {{prod}}
-    <a class="btn btn-primary" href=" {% url 'borrar_producto' prod.id %}" >Borrar</a>
+    {{vent}}
+    <a class="btn btn-primary" href=" {% url 'eliminar_ventas' vent.id %}">Cancelar Venta</a>
+    <a class="btn btn-primary" href=" {% url 'update_ventas' vent.id %}">Modificar</a>
     <br>
 
   {% endfor %}
 
-  <a class="btn btn-primary" href=" {% url 'crear_producto' %}" >Agregar</a>
+  <a class="btn btn-primary" href=" {% url 'crear_ventas' %}">Agregar</a>
 
 {% endblock %}
 

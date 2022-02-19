@@ -10,18 +10,18 @@
 
         <!-- <h1 style="text-align:center;padding-top: 20px;padding-bottom:20px; color:black;"><b>CREAR PRODUCTO</b> </h1> -->
     
-    {% if formulario.errors %}
-        <p style ="color: red"> El formulario contiene errores </p>
+    {% if form.errors %}
+        <p style ="color: red"> {{form.errors}} </p>
 
     {% endif %}
 
     <Form style="padding:20px" action="" method="POST"> {% csrf_token %}
 
         <table style="margin:0px">
-            {{formulario.as_table}}
+            {{form.as_table}}
         </table>
 
-        <input type='submit' value='Enviar'>
+        <input type='submit' value='Realizar Venta'>
         </form>
 
         
