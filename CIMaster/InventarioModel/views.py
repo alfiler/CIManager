@@ -12,6 +12,9 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import ListView,CreateView,DetailView,DeleteView,UpdateView
 
 #Vistas basadas en funciones. se dejo una a modo de demostracion de uso.
+def acerca_de (request ):
+    return render (request, 'acerca_de.html')
+
 
 def vista_inicio (request ):
     return render (request, 'inicio.html')
@@ -147,8 +150,7 @@ def register(request):
     
         return render(request, 'registro.html', {'form':form})
     
-#LOGOUT
+#404
 
-# class LogOut (LogoutView):
-    
-#     print('')
+def page_not_found_view(request, exception):
+    return render(request, '404.html', status=404)

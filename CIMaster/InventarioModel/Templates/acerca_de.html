@@ -1,0 +1,32 @@
+{% extends 'start.html'%}
+
+{% load static %}
+
+{% block titulo %}
+  CIManager - Acerca De
+{% endblock %}
+
+
+{% block bodycontent %}
+
+<div class="align:center"> 
+  <h1 style="text-align:center;padding-top: 20px;padding-bottom:20px; color:black;">
+    Alejandro Bravo </h1> 
+<img src="{% static 'Inventario/img/stock.png' %}" style="width:500px; height:500px;" align="center">
+
+<div style='color:black; margin-left:20px'>
+  <p><b>Proyecto realizado integro por Alejandro Bravo.</b><br>
+    Mi campo de expertice es el Analisis de Datos, visualizaciones y DB Relaciones. 
+    Actualmente me encuentro cursando el Curso de Data Scientist en CoderHouse, por lo cual el curso de Python (comision 26350) me dio un gran numero de herramientas para poder comprender mejor el trabajo a realizar en dicho curso.<br>
+    Mediante los conocimientos aprendidos durante la cursada se logro gestionar los modelos de productos y ventas.  <br>
+    La idea principal del proyecto es generar un sistema de base de gestion y stock. Se ira desarrollando con el tiempo en formato tipo desktop y a futuro como webapp <br> 
+    Nota: Las relaciones y tablas en SQLLite aun no estan desarrolladas por lo cual ventas y productos no estan vinculados entre si, settings.py ->> debug=false<br>
+    Ante cualquier consulta, comunicarse via correo electrico: alejandro.bravo.2010@gmail.com 
+  </p> 
+</div>  
+</div>
+{% endblock %}
+
+{% block footer%}
+
+{% endblock %}
