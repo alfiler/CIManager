@@ -8,6 +8,8 @@ CIManager - {{ventas.nombre_producto}}
 
 {% block bodycontent %}
 
+<h1 > Esta seguro que quiere eliminar <b style="color: red; text-transform: uppercase"> {{ventas.nombre_producto}} </b> </h1>
+
 <Form style="padding:20px" action="" method="POST"> {% csrf_token %}
 <ul> 
 <li> Producto: {{ventas.nombre_producto}}</li>
@@ -16,6 +18,7 @@ CIManager - {{ventas.nombre_producto}}
 <li> VendedorId: {{ventas.vendedor_id}}</li>
 </ul>
 
+<input type='submit' value='Cancelar Venta'>
 <input type="button" value="Volver" onclick="history.back()">
 </form>
 

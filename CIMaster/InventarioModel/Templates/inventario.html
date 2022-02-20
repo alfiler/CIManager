@@ -16,6 +16,7 @@
 
     {{prod}}
     <a class="btn btn-primary" href=" {% url 'borrar_producto' prod.id %}" >Borrar</a>
+    {% comment %} <a class="btn btn-primary" href=" {% url 'actualizar_producto' prod.id %}" >Modificar</a> {% endcomment %}
     <br>
 
   {% endfor %}

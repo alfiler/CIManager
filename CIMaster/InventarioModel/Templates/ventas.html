@@ -9,20 +9,21 @@
 
 {% block bodycontent %}
 
-<div class="align:center"> 
+<div class="align:center" style="margin: 5px; "> 
   <!-- <h1 style="text-align:center;padding-top: 20px;padding-bottom:20px; color:black;"><b></b> </h1> -->
 
   {% for vent in ventas%}
 
     {{vent}}
-    <a class="btn btn-primary" href=" {% url 'eliminar_ventas' vent.id %}">Cancelar Venta</a>
-    <a class="btn btn-primary" href=" {% url 'update_ventas' vent.id %}">Modificar</a>
+    <a class="btn btn-primary" href=" {% url 'eliminar_ventas' vent.id %}"  style="margin: 5px; ">Cancelar Venta</a>
+    <a class="btn btn-primary" href=" {% url 'update_ventas' vent.id %}"  style="margin: 5px; ">Modificar</a>
+    <a class="btn btn-primary" href=" {% url 'ver_ventas' vent.id %}"  style="margin: 5px; ">Inspeccionar</a>
     <br>
 
   {% endfor %}
 
   <a class="btn btn-primary" href=" {% url 'crear_ventas' %}">Agregar</a>
-
+</div>
 {% endblock %}
 
 {% block footer%}
